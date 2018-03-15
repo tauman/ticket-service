@@ -132,28 +132,23 @@ public class VenueTest {
         assertEquals(seatHold, venue.fetchSeatHold(seatHold.getId()));
     }
 
-//    @Test
-//    public void testHoldSeatsWithHoldsAndReserved(){
-//        Venue venue = new Venue(2, 5);
-//        String email = "test@nowhere.com";
-//        SeatHold seatHold1 = venue.holdSeats(2, computeExpiration(60), email);
-//        SeatHold seatHold2 = venue.holdSeats(2, computeExpiration(-60), email);
-//        
-//        SeatReservation seatReservation = venue.reserveSeats(seatHold1.getId(), email);
-//        
-//        SeatHold seatHold3 = venue.holdSeats(2, computeExpiration(60), email);
-//
-//System.out.println(venue.seatStatusMap);
-//        assertEquals(6, venue.numSeatsAvailable());       
-//        assertEquals(seatHold1, venue.fetchSeatHold(seatHold1.getId()));
-//        assertNull(venue.fetchSeatHold(seatHold2.getId()));
-//        assertEquals(seatReservation, venue.fetchSeatReservation(seatReservation.getConfirmationCode()));
-//
-//System.out.println("********");
-//System.out.println(venue.seatStatusMap);
-//System.out.println("********");
-//
-//    }
+    @Test
+    public void testHoldSeatsWithHoldsAndReserved(){
+        Venue venue = new Venue(2, 5);
+        String email = "test@nowhere.com";
+        SeatHold seatHold1 = venue.holdSeats(2, computeExpiration(60), email);
+        SeatHold seatHold2 = venue.holdSeats(2, computeExpiration(-60), email);
+        
+        SeatReservation seatReservation = venue.reserveSeats(seatHold1.getId(), email);
+        
+        SeatHold seatHold3 = venue.holdSeats(2, computeExpiration(60), email);
+
+        assertEquals(6, venue.numSeatsAvailable());       
+        assertNull(venue.fetchSeatHold(seatHold1.getId()));
+        assertNull(venue.fetchSeatHold(seatHold2.getId()));
+        assertEquals(seatReservation, venue.fetchSeatReservation(seatReservation.getConfirmationCode()));
+        assertEquals(seatHold3, venue.fetchSeatHold(seatHold3.getId()));
+    }
 
     @Test
     public void testHoldSeatsWithExpired(){
