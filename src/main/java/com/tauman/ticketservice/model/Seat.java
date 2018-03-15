@@ -6,12 +6,12 @@ import java.util.Objects;
 /**
  * @author Steven Reich
  */
-public class Seat implements Comparable {
+public class Seat implements Comparable<Seat> {
 
     public final String label;
-    private final Comparator comparator;
+    private final Comparator<Seat> comparator;
 
-    public Seat(String label, Comparator comparator) {
+    public Seat(String label, Comparator<Seat> comparator) {
         this.label = label;
         this.comparator = comparator;
     }
@@ -48,16 +48,12 @@ public class Seat implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Seat seat) {
         if(comparator != null) {
-            return comparator.compare(this, o);
+            return comparator.compare(this, seat);
         }
         
-        if(o instanceof Seat) {
-            return label.compareTo(((Seat)o).label);
-        }
-
-        return -1;
+        return label.compareTo((seat).label);
     }
 }
 
