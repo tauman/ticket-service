@@ -16,8 +16,10 @@ public class App {
         System.out.println("To run the tests, run one of the following:\n");
         System.out.println("    gradle test             (This will show output only the first\n");
         System.out.println("                             time or when there are code changes)\n");
-        System.out.println("    gradle cleanTest test   (This will always show output\n");
-        System.out.println("You can add the --info flag to either of those to see logging output)");
+        System.out.println("    gradle cleanTest test   (This will always show output)\n");
+        System.out.println("You can add the --info flag to either of those to see logging output\n");
+        System.out.println("Test reports can be found at:\n");
+        System.out.println("    <PROJECT_ROOT>/build/reports/tests/test/index.html\n");
         System.out.println("\n******************************************************************\n\n");        
     }
 }
