@@ -13,6 +13,7 @@ import org.junit.Test;
  * @author tauman
  */
 public class LocationTest {
+
     @Test
     public void testInitialization() {
         int row = 1;

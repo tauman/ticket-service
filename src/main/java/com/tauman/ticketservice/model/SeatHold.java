@@ -98,10 +98,10 @@ public final class SeatHold {
     public Date getExpirationTime() {
         return expirationTime;
     }
-    
+
     /**
      * Return true if the current time is later than the expirationTime
-     * 
+     *
      * @return true if the current time is later than the expirationTime
      */
     public boolean isExpired() {

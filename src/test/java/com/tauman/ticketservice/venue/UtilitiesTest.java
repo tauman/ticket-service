@@ -16,7 +16,7 @@ import org.junit.Test;
  * @author tauman
  */
 public class UtilitiesTest {
-    
+
     @Test
     public void testCreateSeatLabel() {
         int row = 1;
@@ -24,7 +24,7 @@ public class UtilitiesTest {
         String label = "Row: " + row + " Seat: " + column;
         assertEquals(label, createSeatLabel(row, column));
     }
-    
+
     @Test
     public void testGetLocationFromSeat() {
         int row = 1;

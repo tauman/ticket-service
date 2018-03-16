@@ -1,7 +1,6 @@
 package com.tauman.ticketservice.service;
 
 import com.tauman.ticketservice.model.SeatHold;
-import com.tauman.ticketservice.model.SeatReservation;
 
 /**
  *
@@ -22,8 +21,8 @@ public interface TicketService {
      * @param numSeats the number of seats to find and hold
      * @param customerEmail unique identifier for the customer
      * @return a SeatHold object identifying the specific seats and related
-     * information. If an adequate number of seats cannot be found according
-     * to the strategy used, return null.
+     * information. If an adequate number of seats cannot be found according to
+     * the strategy used, return null.
      */
     SeatHold findAndHoldSeats(int numSeats, String customerEmail);
 

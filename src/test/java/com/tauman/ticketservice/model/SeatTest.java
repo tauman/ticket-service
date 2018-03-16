@@ -8,6 +8,7 @@ import org.junit.Test;
  * @author Steven Reich
  */
 public class SeatTest {
+
     @Test
     public void testInitialization() {
         String label = "R1-S3";

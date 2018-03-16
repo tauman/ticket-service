@@ -10,8 +10,9 @@ package com.tauman.ticketservice;
  * @author tauman
  */
 public class App {
+
     public static void main(String[] args) {
-        System.out.println("\n\n************************* ticket-service *************************");        
+        System.out.println("\n\n************************* ticket-service *************************");
         System.out.println("\nThis project does not have an executable.\n");
         System.out.println("To run the tests, run one of the following:\n");
         System.out.println("    gradle test             (This will show output only the first\n");
@@ -20,6 +21,6 @@ public class App {
         System.out.println("You can add the --info flag to either of those to see logging output\n");
         System.out.println("Test reports can be found at:\n");
         System.out.println("    <PROJECT_ROOT>/build/reports/tests/test/index.html\n");
-        System.out.println("\n******************************************************************\n\n");        
+        System.out.println("\n******************************************************************\n\n");
     }
 }

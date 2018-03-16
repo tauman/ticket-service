@@ -5,6 +5,7 @@ package com.tauman.ticketservice.venue;
  * @author Steven Reich
  */
 public class SeatStatus {
+
     public static final int NOT_HELD = -1;
     public static final String UNRESERVED = "UNRESERVED";
 

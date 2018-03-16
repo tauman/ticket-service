@@ -176,7 +176,7 @@ public final class Venue {
     public SeatReservation fetchSeatReservation(String confirmationCode) {
         LOGGER.debug("Venue.fetchSeatReservation() confirmationCode={}", confirmationCode);
         SeatReservation seatReservation = reservationMap.get(confirmationCode);
-        
+
         LOGGER.debug("Venue.fetchSeatReservation() confirmationCode={} => {}", confirmationCode, seatReservation);
         return seatReservation;
     }
@@ -191,7 +191,7 @@ public final class Venue {
     public SeatHold fetchSeatHold(int seatHoldId) {
         LOGGER.debug("Venue.fetchSeatHold() seatHoldId={}", seatHoldId);
         SeatHold seatHold = seatHoldMap.get(seatHoldId);
-        
+
         LOGGER.debug("Venue.fetchSeatHold() seatHoldId={} => {}", seatHoldId, seatHold);
         return seatHold;
     }

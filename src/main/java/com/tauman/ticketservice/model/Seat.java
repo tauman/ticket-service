@@ -49,11 +49,10 @@ public class Seat implements Comparable<Seat> {
 
     @Override
     public int compareTo(Seat seat) {
-        if(comparator != null) {
+        if (comparator != null) {
             return comparator.compare(this, seat);
         }
-        
+
         return label.compareTo((seat).label);
     }
 }
-

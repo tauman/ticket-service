@@ -9,6 +9,7 @@ import java.util.TreeSet;
  * @author Steven Reich
  */
 public final class SeatReservation {
+
     private final String customerEmail;
     private final String confirmationCode;
     private final TreeSet<Seat> seats;
